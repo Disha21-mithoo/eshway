@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" charset="utf-8">
+    <head>
+        <title>ESHWAY</title>
+        <link rel="icon" href="https://ecell.in/esummit/favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="CSs\styleS.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!--fontawesome cdn-->
+        <script src="https://kit.fontawesome.com/f21928e3a0.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+
+
+      <!--navbar start-->
+      <div id="mydiv">
+        <div id="mydivheader"> <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">NAVIGATION(have fun dragging me!)</button></div>
+  <div id="demo" class="collapse">
+
+    <a class="navopt" href="#introduction">HOME</a><br>
+    <a class="navopt" href="#services">PORTFOLIO</a><br>
+    <a class="navopt" href="#services">SERVICES</a><br>
+    <a class="navopt" href="#FAQS">ABOUT US</a><br>
+
+
+    <!-- <a class="navopt" href="#cry">CRITERIA</a><br> -->
+    <!-- <a class="navopt" href="#sponsors">SPONSORS</a><br> -->
+    <a class="navopt" href="#FAQS">FAQ</a><br>
+    <a class="navopt" href="#footer">CONTACT</a>
+</div>
+
+
+
+
+
+      </div>
+    </div>
+
+      <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("mydiv"));
+
+        function dragElement(elmnt) {
+          var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+          if (document.getElementById(elmnt.id + "header")) {
+            /* if present, the header is where you move the DIV from:*/
+            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+          } else {
+            /* otherwise, move the DIV from anywhere inside the DIV:*/
+            elmnt.onmousedown = dragMouseDown;
+          }
+
+          function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+          }
+
+          function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+          }
+
+          function closeDragElement() {
+            /* stop moving when mouse button is released:*/
+            document.onmouseup = null;
+            document.onmousemove = null;
+          }
+        }
+        </script>
+
+
+
+      <!---navbar end-->
+
+        <section id="introduction">
+        <div class="jumbotron text-center">
+            <img  class="logo" src="images/ew.png">
+
+            <div class="intro">
+
+                <!-- <h1 class="presenter"> ESHLLER</h1>
+                <BR>
+                <BR>
+                <h2>PRESENTS</h2>
+                <BR>
+                <BR>
+                 <br>
+
+                <br>
+                <h1 class="titl">ESHWAY</h1> -->
+
+
+
+            </div>
+        </section>
+
+
+        <p class="text-center quote1"><b>“A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away..”</b></p>
+
+
+
+
+
+        <section id="services">
+          <br>
+
+            <H1 class="text-center"> SERVICES</H1>
+
+            <div class="row text-center">
+
+                <div class="col-lg-4 feature-box">
+                  <img class="inimg" src="images/web.png">
+                  <h3>Website Design + Development</h3>
+                </div>
+                <div class="col-lg-4 feature-box">
+                  <img class="inimg" src="images/app.png">
+
+
+                <!-- <img class="inimg" src="images/rupeeimg.png"> -->
+
+                  <h3>Application Design + Development(Android + iOS)</h3>
+                </div>
+                <div class="col-lg-4 feature-box">
+                  <img class="inimg" src="images/seo.png">
+
+                    <!-- <img class="inimg" src="images/insightimg.png"> -->
+                  <h3>Search Engine Optimisation (SEO)</h3>
+                </div>
+
+            </div>
+        </section>
+
+       <br>
+
+
+        <p class="text-center quote1"><b>“Digital design is like painting, except the paint never dries.”</p>
+
+
+
+
+
+
+        <!-- <section id="cry">
+          <br>
+          <h1 class="text-center">JUDGING CRITERIA</h1>
+          <br>
+
+
+          <div class="row text-center">
+            <div class="col-lg-3 col-sm-6 pink">
+              <i class="fas fa-laptop-code fa-4x"></i><br>
+              <p>TECHNICAL APPROACH</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 red">
+              <i class="fas fa-recycle fa-4x"></i><br>
+              <p>REUSABILITY</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 blue">
+              <i class="fas fa-user fa-4x"></i><br>
+              <p>USER INTERFACE</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 grey">
+              <i class="fas fa-lock fa-4x"></i><br>
+              <p>SECURITY</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 green">
+              <i class="fas fa-tachometer-alt fa-4x"></i><br>
+              <p>PERFORMANCE</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 yellow">
+              <i class="fas fa-rupee-sign fa-4x"></i><br>
+              <p>BUSINESS VALUE TO BANK</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 purple">
+              <i class="fas fa-lightbulb fa-4x"></i><br>
+              <p>INNOVATION</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 orange">
+              <i class="fas fa-thumbs-up fa-4x"></i><br>
+              <p>ADOPTION OF SOLUTION</p>
+            </div>
+
+          </div>
+
+
+
+        </section>
+        <br>
+        <p class="text-center quote1"><b>“<i>S</i>piritual <i>P</i>erson <i>O</i>ffering <i>N</i>ecessary <i>S</i>uggestions <i>O</i>n <i>R</i>ecovery.”</b> ― Gargre</p>
+
+
+
+        <section id="sponsors">
+          <br>
+          <h1 class="text-center">SPONSORS</h1>
+
+
+
+           <div class="row" >
+
+             <div class="col-lg-6 col-sm-6 sponsor-column">
+
+
+
+
+              <img class="spon" src="images/wiprob.png">
+
+
+            </div>
+
+            <div class="col-lg-6 col-sm-6 sponsor-column">
+
+              <img class="spon" src="images/ruminds.png">
+            </div>
+
+
+           </div>
+
+
+          <br>
+
+          <h1 class="text-center">HACKATHON PARTNERS</h1>
+          <br>
+
+          <div class="row">
+            <div class="col-lg-3 col-sm-4 part-column">
+              <img class="partimg" src="images/dev.png">
+            </div>
+            <div class="col-lg-3 col-sm-4 part-column">
+              <img class="partimg" src="images/mat.png">
+            </div>
+            <div class="col-lg-3  col-sm-4 part-column">
+              <img class="partimg" src="images/portis.png">
+            </div>
+            <div class="col-lg-3  col-sm-4 part-column">
+              <img class="partimg" src="images/tenxgrowth.png">
+            </div>
+            <div class="col-lg-4  col-sm-4 part-column">
+              <img class="partimg" src="images/tez.png">
+            </div>
+            <div class="col-lg-4  col-sm-4 part-column">
+              <img class="partimg" src="images/Startupindia.png">
+            </div>
+            <div class=" col-lg-4   part-column">
+              <img class="partimg" src="images/IoTIOT..png">
+            </div>
+
+          </div>
+
+          <div class="col-12 text-center" style="font-size: 20px; text-align: center">
+            <p href="#" class="" style="font-size: 20px">Interested in becoming a sponsor? E-mail us at</p><br>
+             <a href="" class="text-center text-decoration-none " style="color: #6674A3;">ihack@ecell.in</a>
+          </div>
+
+        <BR>
+
+        </section>
+        <br>
+        <p class="text-center quote1"><b>“It takes a great man to be a good listener.”</b> ― Calvin Coolidge</p>
+
+
+        <section id="team">
+          <br>
+          <h1 class="text-center">SPEAKERS & JUDGES</h1>
+          <br>
+          <div class="row text-center">
+            <div class="col-lg-4 col-sm-6 speak-column">
+              <img class="speakimg" src="images/sanjivk.jpg">
+              <br>
+              <p> <b>Sanjiv Kapoor</b>- CTO,Truminds</p>
+
+            </div>
+
+            <div class="col-lg-4 col-sm-6 speak-column">
+              <img  class="speakimg" src="images/shaktig.jpg">
+              <br>
+              <p> <b> Shakti Goap</b>- FOUNDER,Devfolio</p>
+
+            </div>
+
+            <div class="col-lg-4 col-sm-6 speak-column">
+              <img class="speakimg" src="images/shivak.jpg">
+              <br>
+              <p><b>Chetan Kabu</b>- VP Engineering,Truminds</p>
+
+            </div>
+
+            <div class="col-lg-4 col-sm-6 speak-column">
+              <img class="speakimg" src="images/graceg.jpg">
+              <br>
+              <p><b></b>Grace Guo</b>- Founding Team,Dunya labs</p>
+
+            </div>
+
+            <div class="col-lg-3 col-sm-6 speak-column">
+              <img class="speakimg" src="images/kca.jpg">
+              <br>
+              <p><b>KC Ayyagari</b>- Program Manager , Google cloud</p>
+
+            </div>
+            <br>
+            <br>
+
+
+          </div>
+
+        </section>  -->
+
+
+
+
+
+        <!--timeline starts-->
+
+
+
+
+<!-- partial -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>  -->
+
+
+
+
+        <!--timline end-->
+
+
+        <section id="FAQS">
+
+          <br>
+          <h1 class="text-center">ABOUT ESHWAY</h1>
+          <br>
+          <br>
+
+
+
+           <div class="container">
+
+
+             <div id="accordian">
+              <div class="card text-center">
+                <div class="card-header">
+                  <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                    What is ESHWAY?
+
+
+
+                  </a>
+                </div>
+                <div id="collapseOne" class="collapse" data-parent="#accordion">
+                  <div class="card-body faqans">
+                    Eshway is a digital agency specializing in website development, mobile application development, SEO, and other digital marketing services. With a team of skilled developers, designers, and marketers, the company offers end-to-end services, from ideation and strategy development to implementation and ongoing maintenance. The startup strives to stay up-to-date with the latest trends and technologies in the digital space, enabling its clients to stay ahead of the competition.
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+        <br>
+        <div class="text-center">
+       <a style="color: black;" href="#footer">Still have Queries? Contact us!</a>
+      </div>
+
+
+        </section>
+
+
+
+        <footer id="footer">
+          <br>
+          <br>
+
+        <div class="row text-center">
+          <div class="col-lg-6 col-sm-6 footbox">
+
+            <p>ESHWAY : 0011011011</p>
+              <p>eshway10@gmail.com</p>
+          </div>
+
+          <div class="col-lg-6 col-sm-6 footbox">
+            <h4>FOLLOW US ON</h4>
+            <BR>
+            <a href=""><i class="fab fa-facebook-square fa-2x"></i></a>
+            <a href="https://www.instagram.com/esh_way/"><i class="fab fa-instagram-square fa-2x"></i></a>
+            <a href=""><i class="fab fa-twitter-square fa-2x"></i></a>
+            <a href="https://www.linkedin.com/company/eshway"><i class="fab fa-linkedin fa-2x"></i></a>
+          </div>
+
+
+
+
+          <a href="#introduction">
+            <i class=" fas fa-arrow-circle-up fa-4x " style="color:white;"></i>
+          </a>
+          <!-- <a href="#introduction">
+            <i class='fas fa-comment' " style="color:white;"></i>
+          </a> -->
+
+
+        </div>
+
+        </footer>
+
+
+
+    </body>
+</html>
